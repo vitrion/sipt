@@ -50,7 +50,7 @@ Guidelines for installing the SIPT v1.0:
       - The file "SampleCode.scala" and
       - The file "build.sbt"
 4.  Open IntelliJ IDEA.
-5.  Create a new Scala SBT Project providind the following information:
+5.  Create a new Scala SBT Project providing the following information:
       - Name: SampleCode
       - Location: `~/IdeaProjects/SampleCode`
       - JDK: IMPORTANT!!! JDK 8 is a due. If JDK is properly installed, you will see the JDK version here, e.g. 1.8 (Java version 1.8.X.XXX). Is you installed IntelliJ IDEA with JDK included, you will not need to browse the available JDK installations.
