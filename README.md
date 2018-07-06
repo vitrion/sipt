@@ -40,14 +40,14 @@ Guidelines for installing the SIPT v1.0:
 
 1.  Assuming that the OpenJDK is installed, download the software from the following repositories:
       - Apache Spark (https://www.apache.org/dyn/closer.lua/spark/spark-2.3.1/spark-2.3.1-bin-hadoop2.7.tgz) and
-   - Apache Hadoop (http://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-3.0.3/hadoop-3.0.3.tar.gz)
+      - Apache Hadoop (http://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-3.0.3/hadoop-3.0.3.tar.gz)
 2.  Install Spark and Hadoop according to the developer's webpage: 
-   - Apache Spark(https://spark.apache.org/docs/latest/) and
-   - Apache Hadoop(http://hadoop.apache.org/docs/r3.0.3/hadoop-project-dist/hadoop-common/SingleCluster.html)
+      - Apache Spark(https://spark.apache.org/docs/latest/) and
+      - Apache Hadoop(http://hadoop.apache.org/docs/r3.0.3/hadoop-project-dist/hadoop-common/SingleCluster.html)
 3.  Assuming that both Spark and Hadoop are installed properly, download and unzip SIPT. You will be able to examine the output directory, where you will find:
-   - The directory "./ImageSet" with some sample images, 
-   - The JAR file "sipt_2.11-1.0.jar" that represents the SIPT toolkit and 
-   - The file "SampleCode.scala."
+      - The directory "./ImageSet" with some sample images, 
+      - The JAR file "sipt_2.11-1.0.jar" that represents the SIPT toolkit and 
+      - The file "SampleCode.scala."
 4.  Open IntelliJ IDEA.
 5.  Create a new Scala SBT Project.
 ## CSFL file description
