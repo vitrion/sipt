@@ -1,7 +1,7 @@
 # The Spark Image Processing Toolkit
 The *Spark Image Processing Toolkit (SIPT)* is the easiest way to process grayscale digital image algorithms by using Apache Spark and the Hadoop Distributed File System (HDFS)
 
-By using SIPT, you can distributedly process a large amount of images in a High Performance Computer System known as cluster. Alternativelly, you can use this software in both standalone and cluster mode in Spark. This software has been tested in Spark 2.3.1 and Hadoop 3.0.3.
+By using SIPT, you can distributedly process a large amount of images in a High Performance Computer System known as cluster. Alternatively, you can use this software in both standalone and cluster mode in Spark. This software has been tested in Spark 2.3.1 and Hadoop 3.0.3.
 
 ## How to cite this software
 
