@@ -44,7 +44,7 @@ Guidelines for installing the SIPT v1.0:
 2.  Install Spark and Hadoop according to the developer's webpage: 
       - Apache Spark (https://spark.apache.org/docs/latest/) and
       - Apache Hadoop (http://hadoop.apache.org/docs/r3.0.3/hadoop-project-dist/hadoop-common/SingleCluster.html)
-3.  Assuming that both Spark and Hadoop are installed properly, download and unzip the "sipt_v1.0.zip" file. You will be able to examine the output directory `~/Downloads/sipt_v1.0/`, where you will find:
+3.  Assuming that both Spark and Hadoop are installed properly, download and unzip the "sipt_v1.0.zip" file in your home directory. You will be able to examine the output directory `~/sipt_v1.0/`, where you will find:
       - The directory "./ImageSet" with some sample images, 
       - The JAR file "sipt_2.11-1.0.jar" that represents the SIPT toolkit,
       - The file "SampleCode.scala" and
@@ -57,10 +57,13 @@ Guidelines for installing the SIPT v1.0:
       - SBT: Do not change this option. In most cases, the default Scala Build Tool (SBT) version fits with SIPT.
       - Scala: IMPORTANT!!! Please be sure to specify the supported Scala version that fits with Spark, i.e. Scala 2.11.8.
       - Finish. Whenever the above information is complete, you can press the Finish button.
-6.  Replace the "build.sbt" file in project's directory `~/IdeaProjects/SampleCode` with the "build.sbt" file obtained from the extracted file in `~/Downloads/sipt_v1.0/build.sbt`.
-7.  Refresh the project by using the new "build.sbt" file. Also, wait until IntelliJ IDEA finishes to install the required software from the download Maven's repositories.
-8.  Go to menu File -> Project Structure dialog and select the "Libraries" option. Click on the "+" symbol and select "Java". A pop-up dialog will appear that lets you select the directory where you want to import SIPT from. Select the "sipt_2.11-1.0.jar" file `~/Downloads/sipt_v1.0/sipt_2.11-1.0.jar` and click on "OK" button.
-9.  You will be asked to select in which module you want to add SIPT. Please select the module "root" and click the "OK" button.
-10. Then, click the "OK" button to apply the changes to the SampleCode's Project Structure. Also, you will have to wait until the project has been completely updated. After the project is updated, you will be able to browse the imported SIPT packages. This way, you can import, read, write, export and process a large amount of digital grayscale images, by taking advantage of a cluster architecture, Apache Spark and the Hadoop Distributed File System.
-11.  At this point, all you have to do is to copy the "SampleCode.scala" in the project's directory `~/IdeaProjects/SampleCode/src/main/scala/SampleCode.scala`.
-12. 
+      
+6.  Replace the "build.sbt" file in project's directory `~/IdeaProjects/SampleCode` with the "build.sbt" file obtained from the extracted file in `~/sipt_v1.0/build.sbt`. Open the SBT file and replace the "vitrion" usarename for your username in line 12.
+7.  Refresh the project by using the new "build.sbt" file. Also, wait until IntelliJ IDEA finishes to install the required software from the download Maven's repositories. After the project is updated, you will be able to use the imported SIPT packages. 
+8.  Copy the "SampleCode.scala" file in the project's directory `~/IdeaProjects/SampleCode/src/main/scala/SampleCode.scala`. You will be able to see and open the file from the Project Structure. If no Scala SDK is installed, you will be asked to select the appropriated Scala version. Please ensure that the Scala version 2.11.8 is selected.
+9.  Open the "SampleCode.scala" file and replace the "vitrion" username for your username in both lines 13 and 15.
+12.  Open the SBT Shell and wait until the project has been updated.
+13.  Then type in the SBT Shell the command `package` and wait until the compilation and packaging have finished.
+
+
+This way, you can import, read, write, export and process a large amount of digital grayscale images, by taking advantage of a cluster architecture, Apache Spark and the Hadoop Distributed File System.
