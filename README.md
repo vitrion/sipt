@@ -41,10 +41,11 @@ Guidelines for installing the SIPT v1.0:
 1.  Assuming that the OpenJDK is installed, download the software from the following repositories:
       - Apache Spark (https://www.apache.org/dyn/closer.lua/spark/spark-2.3.1/spark-2.3.1-bin-hadoop2.7.tgz) and
       - Apache Hadoop (http://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-3.0.3/hadoop-3.0.3.tar.gz)
-2.  Install Spark and Hadoop according to the developer's webpage: 
+2.  Install Spark, Hadoop and the HDFS according to the developer's webpage: 
       - Apache Spark (https://spark.apache.org/docs/latest/) and
       - Apache Hadoop (http://hadoop.apache.org/docs/r3.0.3/hadoop-project-dist/hadoop-common/SingleCluster.html)
-3.  Assuming that both Spark and Hadoop are installed properly, download and unzip the "sipt_v1.0.zip" file in your home directory. You will be able to examine the output directory `~/sipt_v1.0/`, where you will find:
+      - HDFS (http://hadoop.apache.org/docs/r3.0.3/hadoop-project-dist/hadoop-hdfs/HdfsUserGuide.html)
+3.  Assuming that both Spark, Hadoop and the HDFS are installed properly, download and unzip the "sipt_v1.0.zip" file in your home directory. You will be able to examine the output directory `~/sipt_v1.0/`, where you will find:
       - The directory "./ImageSet" with some sample images, 
       - The JAR file "sipt_2.11-1.0.jar" that represents the SIPT toolkit,
       - The file "SampleCode.scala" and
@@ -60,7 +61,7 @@ Guidelines for installing the SIPT v1.0:
 6.  Replace the "build.sbt" file in project's directory `~/IdeaProjects/SampleCode` with the "build.sbt" file obtained from the extracted file in `~/sipt_v1.0/build.sbt`. Open the SBT file and replace the "vitrion" usarename for your username in line 12.
 7.  Refresh the project by using the new "build.sbt" file. Also, wait until IntelliJ IDEA finishes to install the required software from the download Maven's repositories. After the project is updated, you will be able to use the imported SIPT packages. 
 8.  Copy the "SampleCode.scala" file in the project's directory `~/IdeaProjects/SampleCode/src/main/scala/SampleCode.scala`. You will be able to see and open the file from the Project Structure. If no Scala SDK is installed, you will be asked to select the appropriated Scala version. Please ensure that the Scala version 2.11.8 is selected.
-9.  Open the "SampleCode.scala" file and replace the "vitrion" username for your username in both lines 13 and 15. Notice that the "InputPath" value addresses the directory where the input image set is stored and "OutputPath" value addresses the directory where the output image set will be stored.
+9.  Open the "SampleCode.scala" file and replace the "vitrion" username for your username in both lines 13 and 15. Notice that the "InputPath" value addresses the directory where the input image set is stored and "OutputPath" value addresses the directory where the output image set will be stored. Also, ensure that the HDFS port is specified, according to the HDFS installation (IP address and port 9000).
 12.  Open the SBT Shell and wait until the project has been updated.
 13.  Then type in the SBT Shell the command `package` and wait until the compilation and packaging have finished.
 14.  Go to the `~/IdeaProjects/SampleCode/target/scala-2.11/` directory and type in the terminal the command `spark-submit --jars ~/sipt_v1.0/sipt_2.11-1.0.jar samplecode_2.11-1.0.jar`.
