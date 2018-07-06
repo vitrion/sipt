@@ -57,13 +57,14 @@ Guidelines for installing the SIPT v1.0:
       - SBT: Do not change this option. In most cases, the default Scala Build Tool (SBT) version fits with SIPT.
       - Scala: IMPORTANT!!! Please be sure to specify the supported Scala version that fits with Spark, i.e. Scala 2.11.8.
       - Finish. Whenever the above information is complete, you can press the Finish button.
-      
 6.  Replace the "build.sbt" file in project's directory `~/IdeaProjects/SampleCode` with the "build.sbt" file obtained from the extracted file in `~/sipt_v1.0/build.sbt`. Open the SBT file and replace the "vitrion" usarename for your username in line 12.
 7.  Refresh the project by using the new "build.sbt" file. Also, wait until IntelliJ IDEA finishes to install the required software from the download Maven's repositories. After the project is updated, you will be able to use the imported SIPT packages. 
 8.  Copy the "SampleCode.scala" file in the project's directory `~/IdeaProjects/SampleCode/src/main/scala/SampleCode.scala`. You will be able to see and open the file from the Project Structure. If no Scala SDK is installed, you will be asked to select the appropriated Scala version. Please ensure that the Scala version 2.11.8 is selected.
-9.  Open the "SampleCode.scala" file and replace the "vitrion" username for your username in both lines 13 and 15.
+9.  Open the "SampleCode.scala" file and replace the "vitrion" username for your username in both lines 13 and 15. Notice that the "InputPath" value addresses the directory where the input image set is stored and "OutputPath" value addresses the directory where the output image set will be stored.
 12.  Open the SBT Shell and wait until the project has been updated.
 13.  Then type in the SBT Shell the command `package` and wait until the compilation and packaging have finished.
+14.  Go to the `~/IdeaProjects/SampleCode/target/scala-2.11/` directory and type in the terminal the command `spark-submit --jars ~/sipt_v1.0/sipt_2.11-1.0.jar samplecode_2.11-1.0.jar`.
+15.  Go to your home directory and you will find a new subdirectory named as SIPT, i.e. `~/sipt/`. Here you will find the resulting image set after applying the image operation that you specified in the "SampleCode.scala" file.
 
-
-This way, you can import, read, write, export and process a large amount of digital grayscale images, by taking advantage of a cluster architecture, Apache Spark and the Hadoop Distributed File System.
+This is just a sample application that can be used in future implementations where you want to used SIPT as your main distributed image processing tool. As can be seen in this sample tutorial, with SIPT you can import, read, write, export and process a large amount of digital grayscale images, by taking advantage of a cluster architecture, Apache Spark and the Hadoop Distributed File System.
+As future work is expected to expand the compatible image file formats, include more-than-the-available image processing algorithms and even extend them to digital color images.
