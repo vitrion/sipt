@@ -67,4 +67,5 @@ Guidelines for installing the SIPT v1.0:
 15.  Go to your home directory and you will find a new subdirectory named as SIPT, i.e. `~/sipt/`. Here you will find the resulting image set after applying the image operation that you specified in the "SampleCode.scala" file.
 
 This is just a sample application that can be used in future implementations where you want to used SIPT as your main distributed image processing tool. As can be seen in this sample tutorial, with SIPT you can import, read, write, export and process a large amount of digital grayscale images, by taking advantage of a cluster architecture, Apache Spark and the Hadoop Distributed File System.
+
 As future work is expected to expand the compatible image file formats, include more-than-the-available image processing algorithms and even extend them to digital color images.
