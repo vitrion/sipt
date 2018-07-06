@@ -3,6 +3,8 @@ The *Spark Image Processing Toolkit (SIPT)* is the easiest way to process graysc
 
 By using SIPT, you can distributedly process a large amount of images in a High Performance Computer System known as cluster. Alternatively, you can use this software in both standalone and cluster mode in Spark. This software has been tested in Spark 2.3.1 and Hadoop 3.0.3.
 
+This toolkit is based on the DataFrame SparkSQL's data representation, which is fully compatible with the SparkML library for Machine Learning.
+
 ## How to cite this software
 
 This software was developed under the sponsory of the Mexican Council for Science and Technology under project number 1170.
@@ -71,3 +73,13 @@ Guidelines for installing the SIPT v1.0:
 This is just a sample application that can be used in future implementations where you want to used SIPT as your main distributed image processing tool. As can be seen in this sample tutorial, with SIPT you can import, read, write, export and process a large amount of digital grayscale images, by taking advantage of a cluster architecture, Apache Spark and the Hadoop Distributed File System.
 
 As future work is expected to expand the compatible image file formats, include more-than-the-available image processing algorithms and even extend them to digital color images.
+
+## Functions
+
+SIPT have several implemented functions to manage a large amount of images. The processing flowchart can be found in the paper derived from this software, which is comprised of three stages:
+
+- *ImportImages*. SIPT uses the HDFS to store the image sets distributedly. This function imports an image set by specifying a path where the image set is going to be imported from. Once you execute this function, you will copy the image set to HDFS and then you will extract the image raster information. The pixel information of each image is stored as a parquet file in HDFS for future readings.
+- *ImageOperations*. Basically, the image set expressed as parquet needs to be read from HDFS to process the images in the cluster and written to HDFS after the processing. Between these two functions you can chain several image processing algorithms in order to build a *workflow*.
+   - ReadImages. This function reads the parquet file to create a DataFrame, which contains all the image raster information of all the image set. After sucessfull reading, you can start processing the images distributedly.
+   - WriteImages. This function writes the resulting DataFrame, which contains all the processed image rasters, as a parquet file. After this function, you can export the resulting image set to local file system.
+- *ExportImages*. In this stage, all the processed rasters must be stored as parquet in HDFS. When this function is executed, you can export the images to local file system. To do this, it creates a new image set, respecting the original file format, by specifying a path where the image set is going to exported to.
