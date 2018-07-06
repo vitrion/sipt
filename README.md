@@ -44,7 +44,7 @@ Guidelines for installing the SIPT v1.0:
 2.  Install Spark, Hadoop and the HDFS according to the developer's webpage: 
       - Apache Spark (https://spark.apache.org/docs/latest/) and
       - Apache Hadoop (http://hadoop.apache.org/docs/r3.0.3/hadoop-project-dist/hadoop-common/SingleCluster.html)
-      - HDFS (http://hadoop.apache.org/docs/r3.0.3/hadoop-project-dist/hadoop-hdfs/HdfsUserGuide.html)
+      - HDFS (http://hadoop.apache.org/docs/r3.0.3/hadoop-project-dist/hadoop-hdfs/HdfsUserGuide.html). In this case, you will need the IP address where the HDFS is installed in order to use SIPT.
 3.  Assuming that both Spark, Hadoop and the HDFS are installed properly, download and unzip the "sipt_v1.0.zip" file in your home directory. You will be able to examine the output directory `~/sipt_v1.0/`, where you will find:
       - The directory "./ImageSet" with some sample images, 
       - The JAR file "sipt_2.11-1.0.jar" that represents the SIPT toolkit,
