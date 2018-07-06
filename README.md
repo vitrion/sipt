@@ -39,7 +39,7 @@ Phone number: +52 953 532 0399 ext. 200.
 Guidelines for installing the SIPT v1.0:
 
 1.  Assuming that the OpenJDK is installed, download the software from the following repositories:
-   - Apache Spark (https://www.apache.org/dyn/closer.lua/spark/spark-2.3.1/spark-2.3.1-bin-hadoop2.7.tgz) and
+      - Apache Spark (https://www.apache.org/dyn/closer.lua/spark/spark-2.3.1/spark-2.3.1-bin-hadoop2.7.tgz) and
    - Apache Hadoop (http://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-3.0.3/hadoop-3.0.3.tar.gz)
 2.  Install Spark and Hadoop according to the developer's webpage: 
    - Apache Spark(https://spark.apache.org/docs/latest/) and
