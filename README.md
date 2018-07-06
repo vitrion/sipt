@@ -44,7 +44,7 @@ Guidelines for installing the SIPT v1.0:
 2.  Install Spark and Hadoop according to the developer's webpage: 
       - Apache Spark (https://spark.apache.org/docs/latest/) and
       - Apache Hadoop (http://hadoop.apache.org/docs/r3.0.3/hadoop-project-dist/hadoop-common/SingleCluster.html)
-3.  Assuming that both Spark and Hadoop are installed properly, download and unzip the "sipt_v1.0.zip". You will be able to examine the output directory `~/Downloads/sipt_v1.0/`, where you will find:
+3.  Assuming that both Spark and Hadoop are installed properly, download and unzip the "sipt_v1.0.zip" file. You will be able to examine the output directory `~/Downloads/sipt_v1.0/`, where you will find:
       - The directory "./ImageSet" with some sample images, 
       - The JAR file "sipt_2.11-1.0.jar" that represents the SIPT toolkit,
       - The file "SampleCode.scala" and
@@ -57,7 +57,9 @@ Guidelines for installing the SIPT v1.0:
       - SBT: Do not change this option. In most cases, the default Scala Build Tool (SBT) version fits with SIPT.
       - Scala: IMPORTANT!!! Please be sure to specify the supported Scala version that fits with Spark, i.e. Scala 2.11.8.
       - Finish. Whenever the above information is complete, you can press the Finish button.
-6.  Replace the "build.sbt" file in project's directory with the "build.sbt" file in the extracted SIPT directory `~/IdeaProjects/SampleCode`
+6.  Replace the "build.sbt" file in project's directory `~/IdeaProjects/SampleCode` with the "build.sbt" file obtained from the extracted file in `~/Downloads/sipt_v1.0/build.sbt`.
+7.  Refresh the project by using the new "build.sbt" file. Also, wait until IntelliJ IDEA finishes to install the required software from the download Maven's repositories.
+8.  Install the SIPT software
 ## CSFL file description
 
 | FILE NAME       | DESCRPTION |
