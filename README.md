@@ -1,5 +1,5 @@
 # The Spark Image Processing Toolkit
-The Spark Image Processing Toolkit (SIPT) is the easiest way to process grayscale digital image algorithms by using Apache Spark and the Hadoop Distributed File System (HDFS)
+The *Spark Image Processing Toolkit (SIPT)* is the easiest way to process grayscale digital image algorithms by using Apache Spark and the Hadoop Distributed File System (HDFS)
 
 By using SIPT, you can distributedly process a large amount of images in a High Performance Computer System known as cluster. Alternativelly, you can use this software in both standalone and cluster mode in Spark. This software has been tested in Spark 2.3.1 and Hadoop 3.0.3.
 
@@ -8,7 +8,7 @@ By using SIPT, you can distributedly process a large amount of images in a High 
 This software was developed under the sponsory of the Mexican Council for Science and Technology under project number 1170.
 A journal article is derived from this software, which can be cited by the user as follows:
 
-Téllez‐Velázquez A, Cruz‐Barbosa R. A Spark image processing toolkit. Concurrency Computat Pract Exper. 2018; Under review
+Téllez‐Velázquez A, Cruz‐Barbosa R. A *Spark image processing toolkit.* Concurrency Computat Pract Exper. 2018; Under review
 
 ## Contact information
 
@@ -25,7 +25,7 @@ Carretera a Acatlima km. 2.5, Zip. Code 69000,
 Huajuapan de León, Oaxaca, México, 2016.
 Phone number: +52 953 532 0399 ext. 200.
 
-## Instalation requirements
+## System requirements
 1.  A cluster computing system (master - single node, master - several nodes). If you do not have a cluster available, you can test this software in a personal computer.
 2.  Linux operating system
 3.  OpenJDK version 8
@@ -38,9 +38,16 @@ Phone number: +52 953 532 0399 ext. 200.
 
 Guidelines for installing the SIPT v1.0:
 
-1.  Assuming that the OpenJDK is installed, download the software from the following repositories: Apache Spark (https://www.apache.org/dyn/closer.lua/spark/spark-2.3.1/spark-2.3.1-bin-hadoop2.7.tgz) and Apache Hadoop (http://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-3.0.3/hadoop-3.0.3.tar.gz)
-2.  Install Spark and Hadoop according to the developer's webpage: Apache Spark(https://spark.apache.org/docs/latest/) and Apache Hadoop(http://hadoop.apache.org/docs/r3.0.3/hadoop-project-dist/hadoop-common/SingleCluster.html)
-3.  Download and unzip SIPT. You will be able to examine the output directory, where you will find the directory "./ImageSet" with some sample images, the JAR file "sipt_2.11-1.0.jar" that represents the SIPT toolkit and the file "SampleCode.scala."
+1.  Assuming that the OpenJDK is installed, download the software from the following repositories:
+   - Apache Spark (https://www.apache.org/dyn/closer.lua/spark/spark-2.3.1/spark-2.3.1-bin-hadoop2.7.tgz) and
+   - Apache Hadoop (http://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-3.0.3/hadoop-3.0.3.tar.gz)
+2.  Install Spark and Hadoop according to the developer's webpage: 
+   - Apache Spark(https://spark.apache.org/docs/latest/) and
+   - Apache Hadoop(http://hadoop.apache.org/docs/r3.0.3/hadoop-project-dist/hadoop-common/SingleCluster.html)
+3.  Assuming that both Spark and Hadoop are installed properly, download and unzip SIPT. You will be able to examine the output directory, where you will find:
+   - The directory "./ImageSet" with some sample images, 
+   - The JAR file "sipt_2.11-1.0.jar" that represents the SIPT toolkit and 
+   - The file "SampleCode.scala."
 4.  Open IntelliJ IDEA.
 5.  Create a new Scala SBT Project.
 ## CSFL file description
